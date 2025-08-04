@@ -13,7 +13,7 @@ if uploaded_file:
     with st.spinner("Uploading and running Cellpose..."):
 
         files = {"file": uploaded_file.getvalue()}
-        response = requests.post("https://andy-ring--organoid-streamlit-app-run-dev.modal.run/segment_zip", files=files)
+        response = requests.post("https://andy-ring--organoid-streamlit-app-run-app.modal.run/segment_zip", files=files)
 
         if response.status_code == 200:
             data = response.json()
